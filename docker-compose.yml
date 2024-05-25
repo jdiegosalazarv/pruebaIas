@@ -14,6 +14,6 @@ services:
     image: ias-app:1.0.0
     build: .
     ports:
-      - "8087:8087"
+      - "8787:8787"
     depends_on:
       - postgres
