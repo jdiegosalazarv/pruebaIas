@@ -19,7 +19,8 @@ public class PostgresqlConnectionPool {
     @Bean
     public ConnectionPool getConnectionPool() {
         var dbProperties = PostgresqlConnectionProperties.builder()
-                .host("localhost")
+                .host("postgres")
+//                .host("localhost")
                 .port(5432)
                 .database("ias")
                 .user("postgres")
