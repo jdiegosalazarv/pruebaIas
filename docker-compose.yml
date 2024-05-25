@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ias
+    ports:
+      - "5432:5432"
+
+
+  ias-app:
+    image: ias-app:1.0.0
+    build: .
+    ports:
+      - "8087:8087"
+    depends_on:
+      - postgres
